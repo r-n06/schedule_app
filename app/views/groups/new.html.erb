@@ -1,0 +1,30 @@
+<div class="group-create">
+  <%= link_to "shareplan", events_path, class:"app-name" %>
+    <%= form_with model: @group, url: groups_path, local: true do |f| %>
+    <div class="group-form">
+    
+      <div clsss="add-group-form">
+      <%= render "devise/shared/error_messages", model: f.object %>
+        <div class="group-name-form">
+          <div class="new-group-name">Group Name</div>
+          <%= f.text_field :name, class: 'new-group--name', placeholder: 'チャットルーム名を入力してください'%>
+        </div>
+        <div class='group-form-field-name'>
+          <div class="group-member">Group Member</div>
+          <select name="room[user_ids][]">
+            <option value="">チャットするユーザーを選択してください</option>
+            <% User.where.not(id: current_user.id).each do |user| %>
+              <option value=<%=user.id%>><%= user.name %></option>
+            <% end %>
+          </select>
+          <input name="group[user_ids][]" type="hidden" value=<%=current_user.id%>>
+        </div>
+      </div>
+    </div>
+    <div class="group-submit">
+      <div class='group-form-field-submit'>
+        <%= f.submit class: 'group-form-submit-btn'%>
+      </div>
+    <% end %>
+    </div>
+</div>

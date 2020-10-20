@@ -1,0 +1,33 @@
+<div class="group">
+  <div class="group-side">
+    <div class="group-side-header">
+      <div class="group-side--header">
+        <div class="app-name">
+          <h1>shareplan</h1>
+        </div>
+        <div class="user-info">
+          <%# if current_user.image.present? %>
+            <%#= image_tag current_user.image, class:"user-image"%>
+          <%# end %>
+          <div class="user-nickname">
+            <%= current_user.nickname %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="group-side-body">
+      <div class="group-room">
+        <div class="group-room-create">
+          <%= link_to "＋グループ作成", new_group_path, class:"group-create" %>
+        </div>
+        <% current_user.groups.each do |group| %>
+          <%= link_to group.name, groups_path(params[:id]), class:"group-name" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="group-main">
+    <div class="group-main-header">
+    </div>
+  </div>
+</div>
