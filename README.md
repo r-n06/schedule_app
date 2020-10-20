@@ -7,7 +7,7 @@
 | password | string | null: false |
 
 ## Association
-- has_many :groups
+- has_many :events
 - has_many :comments
 
 ## Groupテーブル
@@ -21,9 +21,9 @@
 ## Association
 - belongs_to :user
 - has_many :comments
-- has_one :schedule
+- has_one :event
 
-## Scheduleテーブル
+## Eventテーブル
 
 | column | type       | option                         |
 | ------ | ---------- | ------------------------------ |

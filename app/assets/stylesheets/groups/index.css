@@ -1,0 +1,113 @@
+.group{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.group-side{
+  height: 100%;
+  width: 300px;
+}
+
+.group-side-header{
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-name{
+  color: skyblue;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.user-nickname{
+  color: skyblue;
+  font-size: 35px;
+}
+
+.group-side-body{
+  height: 85%;
+  background-color: rgb(243, 248, 250);
+  display: flex;
+  justify-content: center;
+}
+
+.group-name{
+  display: block;
+  margin: 40px 0;
+  color: skyblue;
+  font-size: 20px;
+}
+
+.group-room-create{
+  padding: 60px 0 40px;
+}
+
+.group-create{
+  padding: 25px;
+  border: 2px solid skyblue;
+  color: skyblue;
+  font-size: 15px;
+}
+
+.group-main{
+  height: 100%;
+  width: calc( 100% - 300px );
+}
+
+.group-main-header{
+  height: 15%;
+  background-color: rgb(199, 227, 238);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-chose-name{
+  font-size: 25px;
+  color: white;
+}
+.group-main-body{
+  height: 85%;
+  width: 100%;
+}
+.group-main-left{
+  height: 90%;
+  width: 100%;
+  display: block;
+}
+
+.group-add-plan{
+  height: 100%;
+  width: 100%;
+}
+.calendar{
+  height: 100%;
+  width: 100%;
+}
+
+.group-main-right{
+  height: 10%;
+  width: 100%;
+  display: block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.group-links{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.add-schedule, .add-comment{
+  width: 300px;
+  padding: 20px;
+  margin: 50px 0;
+  border: 2px solid skyblue;
+  color: skyblue;
+}
+

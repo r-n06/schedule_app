@@ -1,0 +1,51 @@
+.group-create{
+  height: 100vh;
+  width: 100%;
+}
+
+.group-form{
+  height: 300px;
+  width: 900px;
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-name-form, .group-form-field-name{
+  display: flex;
+}
+
+.group-name-form{
+  margin-bottom: 50px;
+}
+
+.new-group-name, .group-member{
+  font-size: 30px;
+  margin-right: 30px;
+}
+
+.new-group--name{
+  width: 500px;
+}
+
+.group-submit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-form-submit-btn{
+  height: 50px;
+  width: 200px;
+  background-color: white;
+  color: skyblue;
+  border: 1px solid skyblue;
+}
+
+.error-messages{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  color: red;
+}

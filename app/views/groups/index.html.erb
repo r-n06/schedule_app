@@ -1,0 +1,47 @@
+<div class="group">
+  <div class="group-side">
+    <div class="group-side-header">
+      <div class="group-side--header">
+        <div class="app-name">
+          <%= link_to "shareplan", events_path %>
+        </div>
+        <div class="user-info">
+          <%# if current_user.image.present? %>
+            <%#= image_tag current_user.image, class:"user-image"%>
+          <%# end %>
+          <div class="user-nickname">
+            <%= current_user.nickname %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="group-side-body">
+      <div class="group-room">
+        <div class="group-room-create">
+          <%= link_to "＋グループ作成", new_group_path, class:"group-create" %>
+        </div>
+        <% current_user.groups.each do |group| %>
+          <%= link_to group.name, "#", class:"group-name" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="group-main">
+    <div class="group-main-header">
+      <div class="group-chose-name"><%= @groups.name %></div>
+    </div>
+    <div class="group-main-body">
+      <div class="group-main-left">
+        <div class="group-add-plan">
+          <div id='calendar', class="calendar"></div>
+        </div>
+      </div>
+      <div class="group-main-right">
+       <div class="group-links">
+          <%= link_to "スケジュールの追加", "#", class:"add-schedule"%>
+          <%= link_to "コメントする", "#", class:"add-comment" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
