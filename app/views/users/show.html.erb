@@ -1,0 +1,37 @@
+<div class="user-show">
+  <div class="user-header">
+    <div class="app-name">
+      <%= link_to "shareplan", events_path %>
+    </div>
+    <div class="logout-btn">
+      <%= link_to "ログアウト", destroy_user_session_path(params[:id]), method: :delete %>
+    </div>
+  </div>
+  <div class="user-body">
+    <div class="user-margin"></div>
+    <div class="user-info">
+      <div class="user-image">
+        <% if current_user.user_image.present? %>
+          <%= image_tag current_user.image, class:"user-aicon" %>
+        <% else %>
+          <%= image_tag "aicon.png", class:"user-aicon"%>
+        <% end %>
+      </div>
+      <div class="user-info-privacy">
+        <div class="user--info-privacy">
+          <div class="user-info-nickname">
+            <%= current_user.nickname %>
+          </div>
+          <div class="user-info-email">
+            <%= current_user.email %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="user-edit">
+      <div class="user-edit-btn">
+        <%= link_to "Edit", edit_user_path(params[:id]) %>
+      </div>
+    </div>
+  </div>
+</div>

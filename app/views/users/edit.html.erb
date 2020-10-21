@@ -1,0 +1,33 @@
+<div class="sign-up">
+  <div class="sign-up-header">
+    <div class="app-name">
+      <%= link_to "shareplan", events_path %>
+    </div>
+    <div class="edit-font">
+      <h2>Edit</h2>
+    </div>
+  </div>
+
+  <%= form_with model: @user, url: user_path, local: true do |f| %>
+  <%= render "devise/shared/error_messages", model: f.object %>
+
+    <div class="field">
+      <%= f.label :nickname, class: "field-font" %>
+      <%= f.text_field :nickname, autofocus: true, autocomplete: "off", class: "field-box" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "off" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Submit" %>
+    </div>
+  <% end %>
+</div>

@@ -10,7 +10,7 @@
             <%#= image_tag current_user.image, class:"user-image"%>
           <%# end %>
           <div class="user-nickname">
-            <%= current_user.nickname %>
+            <%= link_to current_user.nickname, user_path(current_user.id) %>
           </div>
         </div>
       </div>
