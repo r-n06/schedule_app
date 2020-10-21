@@ -1,6 +1,8 @@
 <div class="user-show">
   <div class="user-header">
-    <div class="app-name">Shareplan</div>
+    <div class="app-name">
+      <%= link_to "shareplan", events_path %>
+    </div>
     <div class="logout-btn">
       <%= link_to "ログアウト", destroy_user_session_path(params[:id]), method: :delete %>
     </div>
@@ -28,7 +30,7 @@
     </div>
     <div class="user-edit">
       <div class="user-edit-btn">
-        <%= link_to "Edit", "#"%>
+        <%= link_to "Edit", edit_user_path(params[:id]) %>
       </div>
     </div>
   </div>
