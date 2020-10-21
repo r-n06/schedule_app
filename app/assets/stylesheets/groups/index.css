@@ -4,6 +4,10 @@
   display: flex;
 }
 
+a {
+  text-decoration: none;
+  color: skyblue;
+}
 .group-side{
   height: 100%;
   width: 300px;
