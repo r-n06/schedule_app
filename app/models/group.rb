@@ -1,6 +1,5 @@
 class Group < ApplicationRecord
-  with_options presence: true do
-    validates :name
+  validates :name, presence: true
   end
 
   has_many :group_users
